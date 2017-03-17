@@ -1,0 +1,19 @@
+{
+    "name": "song0223/getui",
+    "description": "GetuiSDK,PSR-4 Autoloader support!",
+    "keywords": ["getui", "getuisdk", "getui-sdk", "getui-laravel"],
+    "authors": [
+        {
+            "name": "sx",
+            "email": "790292520@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0"
+    },
+    "autoload": {
+        "psr-4": {
+          "getuisdk\\": "src/"
+        }
+    }
+}
