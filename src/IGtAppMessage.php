@@ -33,7 +33,7 @@ class IGtAppMessage extends IGtMessage
      * @var int $speed
      */
     public $speed = 0;
-
+    public $conditions;
     /**
      * construct
      */

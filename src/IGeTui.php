@@ -409,7 +409,7 @@ class IGeTui
             $params['provinceList'] = $message->getProvinceList();
             $params['tagList'] = $message->getTagList();
             $params['speed'] = $message->getSpeed();
-
+            $params['conditions'] = $message->getConditions();
         }
         $rep = $this->httpPostJSON($this->host, $params);
         if ((string)$rep['result'] === 'ok') {

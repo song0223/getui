@@ -20,6 +20,7 @@ use getuisdk\IGtTransmissionTemplate;
 use getuisdk\IGtNotyPopLoadTemplate;
 use getuisdk\IGtLinkTemplate;
 use getuisdk\IGtListMessage;
+use getuisdk\AppConditions;
 
 class Getui
 {
@@ -293,18 +294,18 @@ class Getui
         $appIdList=array($this->appid);
         $phoneTypeList=array('ANDROID');
         $provinceList=array('浙江');
-        $tagList=array('haha');
+        $tagList=array('标签');
         //用户属性
         //$age = array("0000", "0010");
 
-        //$cdt = new AppConditions();
+        $cdt = new AppConditions();
         // $cdt->addCondition(AppConditions::PHONE_TYPE, $phoneTypeList);
         // $cdt->addCondition(AppConditions::REGION, $provinceList);
-        //$cdt->addCondition(AppConditions::TAG, $tagList);
+        $cdt->addCondition2(AppConditions::TAG, $tagList);
         //$cdt->addCondition("age", $age);
 
         $message->setAppIdList($appIdList);
-        //$message->set_conditions($cdt->getCondition());
+        $message->set_conditions($cdt->getCondition());
 
         $rep = $igt->pushMessageToApp($message,"任务组名");
         return $rep;
