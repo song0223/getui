@@ -86,7 +86,7 @@ class IGtNotificationTemplate extends IGtBaseTemplate
         $actionChain4->setActionId(10030);
         $actionChain4->setType(ActionChainType::STARTAPP);
         $actionChain4->setAppId('');
-        $actionChain4->setAutostart(($this->transmissionType === '1'));
+        $actionChain4->setAutostart($this->transmissionType == '1'? true : false);
         $actionChain4->setAppStartUpId($appStartUp);
         $actionChain4->setFailedAction(100);
         $actionChain4->setNext(100);
