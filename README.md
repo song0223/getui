@@ -16,8 +16,9 @@ wy0727版本：
  IGeTui.php 412行增加$params['conditions'] = $message->getConditions();
 ```
 可能都是小错误。不过可以减少大家蒙逼的时间  
+```
 $cid = 'b76542ce1927d2d994d32274f58d91fc';  
 $getui = new Getui;  
 $template = $getui->IGtNotificationTemplateDemo('哎呦我去','震惊！','大嘴一秒五喷毁灭中国电竞');  
 $getui->pushMessageToApp($cid,$template));
-````
+```
